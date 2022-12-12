@@ -1,0 +1,22 @@
+<MapView
+          style={styles.mapStyle}
+          initialRegion={{
+            latitude: 6.913295,
+            longitude: 79.920659,
+            latitudeDelta: 0.2,
+            longitudeDelta: 0.2,
+          }}
+          customMapStyle={mapStyle}>
+          <Marker
+            draggable
+            coordinate={{
+              latitude: 6.913295,
+              longitude: 79.920659,
+            }}
+            onDragEnd={
+              (e) => alert(JSON.stringify(e.nativeEvent.coordinate))
+            }
+            title={'Helios Marker'}
+            description={'This is a description of the marker'}
+          />
+        </MapView>
